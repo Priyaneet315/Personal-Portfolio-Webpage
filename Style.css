@@ -1,0 +1,368 @@
+/* Basic Reset & Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif; /* Or 'Roboto', if you link it from Google Fonts */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  color: #4f46e5; /* Primary accent color */
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px; /* Consistent padding for all containers */
+}
+
+/* Header */
+header {
+  background: #4f46e5; /* Deep purple/blue for header */
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: sticky; /* Makes header sticky on scroll */
+  top: 0;
+  z-index: 1000; /* Ensures header stays on top of other content */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white; /* Ensure logo text is white */
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0; /* Remove default ul margin */
+}
+
+nav a {
+  color: white;
+  font-weight: bold;
+  padding: 5px 0; /* Add padding for better clickable area */
+  position: relative; /* For the underline effect */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Underline effect on hover for navigation links */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px; /* Position below text */
+    left: 0;
+    background-color: white; /* Underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #e0e7ff; /* Lighter color on hover */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #e0e7ff, #c3dafe); /* Soft gradient for hero */
+  padding: 100px 20px; /* Increased padding */
+  text-align: center;
+  color: #333; /* Ensure text is readable on light background */
+  /* These next two lines adjust for the sticky header, pushing content down */
+  margin-top: -64px; /* Compensate for header height (approx. 64px) */
+  padding-top: 160px; /* Ensure content is visible below the sticky header */
+}
+
+.hero h2 {
+  font-size: 42px; /* Larger heading */
+  margin-bottom: 15px;
+  color: #2a2a2a; /* Darker heading color */
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 18px; /* Larger paragraph text */
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Optional: Button style for hero section */
+.button {
+    display: inline-block;
+    background: #4f46e5;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background: #3f36d4;
+    transform: translateY(-2px);
+}
+
+
+/* Sections General Styling */
+section {
+  padding: 80px 20px; /* More vertical padding for all sections */
+  background-color: #ffffff; /* Default background for sections */
+  box-shadow: 0 0 10px rgba(0,0,0,0.03); /* Very subtle shadow for section separation */
+}
+
+/* Alternate background for even sections for visual separation */
+section:nth-of-type(even) {
+    background-color: #fefefe;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px; /* More space below section headings */
+    color: #4f46e5; /* Primary accent color for headings */
+    position: relative;
+    padding-bottom: 10px; /* Space for the underline */
+}
+
+/* Underline effect for section headings */
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 80px; /* Length of the underline */
+    height: 4px;
+    background-color: #4f46e5;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+    border-radius: 2px;
+}
+
+
+/* About Section */
+.about {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto; /* Center the content within the section */
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Optional: Skills styling */
+.skills {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skills span {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+
+/* Projects Section */
+.projects .project-list {
+  display: grid; /* Changed to CSS Grid for better control */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns: min 280px, max 1fr */
+  gap: 30px; /* Space between projects */
+  justify-content: center; /* Centers items in the grid if they don't fill a row */
+  align-items: stretch; /* Ensures all project boxes in a row have the same height */
+}
+
+.project {
+  background: white;
+  padding: 30px; /* More padding inside project boxes */
+  border-radius: 12px; /* Slightly more rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Nicer, more prominent shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effects */
+  text-align: left; /* Align text within project boxes to left */
+  display: flex; /* Use flexbox for content inside project */
+  flex-direction: column; /* Stack heading and paragraph */
+  justify-content: space-between; /* Distribute space if content heights vary */
+  border: 1px solid #eee; /* Subtle border */
+}
+
+.project:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.project h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #4f46e5; /* Project title color */
+}
+
+.project p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Optional: Project links within project box */
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button-small {
+    display: inline-block;
+    background: #6a62e0; /* Slightly different button color */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background 0.3s ease;
+}
+
+.button-small:hover {
+    background: #5a52d0;
+}
+
+
+/* Contact Section */
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact a {
+    font-weight: bold;
+    color: #4f46e5;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.contact a:hover {
+    color: #3f36d4; /* Darker on hover */
+    text-decoration: underline;
+}
+
+/* Optional: Social Links */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    font-size: 1.1em;
+    color: #4f46e5;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #3f36d4;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px; /* More padding */
+  background: #333; /* Darker footer background */
+  color: #bbb; /* Lighter text color */
+  font-size: 14px;
+  margin-top: 0; /* Ensure no top margin */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  header .container {
+    flex-direction: column; /* Stack logo and nav */
+    text-align: center;
+  }
+
+  header .logo {
+    margin-bottom: 15px; /* Space between logo and nav when stacked */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px; /* Smaller gap for stacked nav items */
+    align-items: center; /* Center nav items */
+  }
+
+  .hero {
+    padding: 80px 15px; /* Adjust hero padding */
+    padding-top: 140px; /* Ensure content is below sticky header */
+  }
+
+  .hero h2 {
+    font-size: 32px; /* Smaller font size for hero heading */
+  }
+
+  .hero p {
+    font-size: 16px; /* Smaller font size for hero paragraph */
+  }
+
+  section {
+    padding: 60px 15px; /* Adjust section padding */
+  }
+
+  section h2 {
+    font-size: 30px; /* Smaller section headings */
+    margin-bottom: 40px;
+  }
+
+  .projects .project-list {
+    grid-template-columns: 1fr; /* Single column for projects on small screens */
+  }
+
+  .project {
+    padding: 25px; /* Slightly less padding for project boxes */
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 15px;
+    }
+    section h2 {
+        font-size: 26px;
+    }
+    .contact p {
+        font-size: 16px;
+    }
+}
