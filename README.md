@@ -34,4 +34,3 @@ In summary, this webpage is a fully responsive, visually appealing portfolio sit
 *OUTPUT:
 <img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/5c44efd7-d498-42dd-b8e0-4a6e4357a4ba" />
 <img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/3ea824fd-aa07-416c-b86e-a7afdb013ee3" />
-<img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/b8dba1f9-dc76-4003-b99d-bf05015a4287" />
