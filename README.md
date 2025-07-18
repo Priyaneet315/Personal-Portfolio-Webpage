@@ -30,3 +30,8 @@ Finally, the footer spans the width of the page and uses a darker background (#3
 Throughout the site, media queries are used to ensure full responsiveness on tablets and phones. Navigation stacks vertically on small screens, font sizes and paddings are adjusted, and the grid layout adapts for mobile readability.
 
 In summary, this webpage is a fully responsive, visually appealing portfolio site designed with clean HTML5 and CSS3. It reflects professional UI principles and provides a well-organized layout that works smoothly across devices.
+
+*OUTPUT:
+<img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/5c44efd7-d498-42dd-b8e0-4a6e4357a4ba" />
+<img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/3ea824fd-aa07-416c-b86e-a7afdb013ee3" />
+<img width="1470" height="956" alt="Image" src="https://github.com/user-attachments/assets/b8dba1f9-dc76-4003-b99d-bf05015a4287" />
