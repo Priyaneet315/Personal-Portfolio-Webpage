@@ -13,7 +13,7 @@
 *MENTOR*: NEELA SANTOSH
 
 *DESCRIPTION OF THE TASK*:
-         As my second task, I designed and built a personal portfolio website for a front-end web developer. The goal was to create a neat, modern interface with responsive features using HTML and CSS. The site showcases the developer's skills, past works, and contact details all on one scrollable page.
+         As my third task, I designed and built a personal portfolio website for a front-end web developer. The goal was to create a neat, modern interface with responsive features using HTML and CSS. The site showcases the developer's skills, past works, and contact details all on one scrollable page.
 
 The webpage starts with a sticky header at the top. It has a deep blue-violet background (#4f46e5) with white text for a strong contrast. The site logo on the left says "Priya the Developer." To the right is a horizontal navigation bar with internal links that smooth-scroll to different sections: About, Projects, and Contact. A subtle underline effect appears on the navigation links when hovered over, created with CSS pseudo-elements (::after). This provides a smooth transition to improve user interaction.
 
