@@ -1,76 +1,73 @@
-/* Basic Reset & Body Styling */
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif; /* Or 'Roboto', if you link it from Google Fonts */
+  font-family: 'Segoe UI', sans-serif; 
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
 }
 
 a {
-  color: #4f46e5; /* Primary accent color */
+  color: #4f46e5;
   text-decoration: none;
 }
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px; /* Consistent padding for all containers */
+  padding: 20px;
 }
 
-/* Header */
 header {
-  background: #4f46e5; /* Deep purple/blue for header */
+  background: #4f46e5;
   color: white;
   padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  position: sticky; /* Makes header sticky on scroll */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  position: sticky; 
   top: 0;
-  z-index: 1000; /* Ensures header stays on top of other content */
+  z-index: 1000;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 header .logo {
   font-size: 24px;
   font-weight: bold;
-  color: white; /* Ensure logo text is white */
+  color: white;
 }
 
 nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
-  margin: 0; /* Remove default ul margin */
+  margin: 0; 
 }
 
 nav a {
   color: white;
   font-weight: bold;
-  padding: 5px 0; /* Add padding for better clickable area */
-  position: relative; /* For the underline effect */
-  transition: color 0.3s ease; /* Smooth transition for color */
+  padding: 5px 0;
+  position: relative; 
+  transition: color 0.3s ease;
 }
 
-/* Underline effect on hover for navigation links */
 nav a::after {
     content: '';
     position: absolute;
     width: 0%;
     height: 2px;
-    bottom: -5px; /* Position below text */
+    bottom: -5px;
     left: 0;
-    background-color: white; /* Underline color */
+    background-color: white; 
     transition: width 0.3s ease-in-out;
 }
 
@@ -79,35 +76,33 @@ nav a:hover::after {
 }
 
 nav a:hover {
-    color: #e0e7ff; /* Lighter color on hover */
+    color: #e0e7ff;
 }
 
-/* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #e0e7ff, #c3dafe); /* Soft gradient for hero */
-  padding: 100px 20px; /* Increased padding */
+  background: linear-gradient(135deg, #e0e7ff, #c3dafe);
+  padding: 100px 20px;
   text-align: center;
-  color: #333; /* Ensure text is readable on light background */
-  /* These next two lines adjust for the sticky header, pushing content down */
-  margin-top: -64px; /* Compensate for header height (approx. 64px) */
-  padding-top: 160px; /* Ensure content is visible below the sticky header */
+  color: #333; 
+  
+  margin-top: -64px;
+  padding-top: 160px;
 }
 
 .hero h2 {
-  font-size: 42px; /* Larger heading */
+  font-size: 42px;
   margin-bottom: 15px;
-  color: #2a2a2a; /* Darker heading color */
+  color: #2a2a2a;
   line-height: 1.2;
 }
 
 .hero p {
-  font-size: 18px; /* Larger paragraph text */
+  font-size: 18px;
   color: #555;
   max-width: 700px;
   margin: 0 auto;
 }
 
-/* Optional: Button style for hero section */
 .button {
     display: inline-block;
     background: #4f46e5;
@@ -125,51 +120,46 @@ nav a:hover {
 }
 
 
-/* Sections General Styling */
+
 section {
-  padding: 80px 20px; /* More vertical padding for all sections */
-  background-color: #ffffff; /* Default background for sections */
-  box-shadow: 0 0 10px rgba(0,0,0,0.03); /* Very subtle shadow for section separation */
+  padding: 80px 20px; 
+  background-color: #ffffff; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.03); 
 }
 
-/* Alternate background for even sections for visual separation */
-section:nth-of-type(even) {
     background-color: #fefefe;
 }
 
 section h2 {
     text-align: center;
     font-size: 36px;
-    margin-bottom: 50px; /* More space below section headings */
-    color: #4f46e5; /* Primary accent color for headings */
+    margin-bottom: 50px;
+    color: #4f46e5;
     position: relative;
-    padding-bottom: 10px; /* Space for the underline */
+    padding-bottom: 10px;
 }
 
-/* Underline effect for section headings */
 section h2::after {
     content: '';
     position: absolute;
-    width: 80px; /* Length of the underline */
+    width: 80px; 
     height: 4px;
     background-color: #4f46e5;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); /* Center the underline */
+    transform: translateX(-50%);
     border-radius: 2px;
 }
 
 
-/* About Section */
 .about {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto; /* Center the content within the section */
+    margin: 0 auto;
     font-size: 18px;
     line-height: 1.8;
 }
 
-/* Optional: Skills styling */
 .skills {
     margin-top: 30px;
     display: flex;
@@ -188,18 +178,17 @@ section h2::after {
 }
 
 
-/* Projects Section */
 .projects .project-list {
-  display: grid; /* Changed to CSS Grid for better control */
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns: min 280px, max 1fr */
-  gap: 30px; /* Space between projects */
-  justify-content: center; /* Centers items in the grid if they don't fill a row */
-  align-items: stretch; /* Ensures all project boxes in a row have the same height */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .project {
   background: white;
-  padding: 30px; /* More padding inside project boxes */
+  padding: 30px;
   border-radius: 12px; /* Slightly more rounded corners */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Nicer, more prominent shadow */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effects */
