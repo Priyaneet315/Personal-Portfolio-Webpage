@@ -189,25 +189,25 @@ section h2::after {
 .project {
   background: white;
   padding: 30px;
-  border-radius: 12px; /* Slightly more rounded corners */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Nicer, more prominent shadow */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effects */
-  text-align: left; /* Align text within project boxes to left */
-  display: flex; /* Use flexbox for content inside project */
-  flex-direction: column; /* Stack heading and paragraph */
-  justify-content: space-between; /* Distribute space if content heights vary */
-  border: 1px solid #eee; /* Subtle border */
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #eee; 
 }
 
 .project:hover {
-  transform: translateY(-8px); /* Lift effect on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: translateY(-8px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
 }
 
 .project h3 {
   font-size: 22px;
   margin-bottom: 10px;
-  color: #4f46e5; /* Project title color */
+  color: #4f46e5;
 }
 
 .project p {
@@ -215,7 +215,6 @@ section h2::after {
   color: #666;
 }
 
-/* Optional: Project links within project box */
 .project-links {
     margin-top: 20px;
     display: flex;
@@ -225,7 +224,7 @@ section h2::after {
 
 .button-small {
     display: inline-block;
-    background: #6a62e0; /* Slightly different button color */
+    background: #6a62e0;
     color: white;
     padding: 8px 15px;
     border-radius: 5px;
@@ -238,7 +237,6 @@ section h2::after {
 }
 
 
-/* Contact Section */
 .contact {
     text-align: center;
 }
@@ -255,11 +253,10 @@ section h2::after {
 }
 
 .contact a:hover {
-    color: #3f36d4; /* Darker on hover */
+    color: #3f36d4;
     text-decoration: underline;
 }
 
-/* Optional: Social Links */
 .social-links {
     margin-top: 30px;
     display: flex;
@@ -278,69 +275,67 @@ section h2::after {
 }
 
 
-/* Footer */
 footer {
   text-align: center;
-  padding: 30px; /* More padding */
-  background: #333; /* Darker footer background */
-  color: #bbb; /* Lighter text color */
+  padding: 30px;
+  background: #333;
+  color: #bbb; 
   font-size: 14px;
-  margin-top: 0; /* Ensure no top margin */
+  margin-top: 0;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .container {
-    padding: 15px; /* Reduce padding on smaller screens */
+    padding: 15px;
   }
 
   header .container {
-    flex-direction: column; /* Stack logo and nav */
+    flex-direction: column;
     text-align: center;
   }
 
   header .logo {
-    margin-bottom: 15px; /* Space between logo and nav when stacked */
+    margin-bottom: 15px;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 10px; /* Smaller gap for stacked nav items */
-    align-items: center; /* Center nav items */
+    gap: 10px;
+    align-items: center;
   }
 
   .hero {
-    padding: 80px 15px; /* Adjust hero padding */
-    padding-top: 140px; /* Ensure content is below sticky header */
+    padding: 80px 15px;
+    padding-top: 140px; 
   }
 
   .hero h2 {
-    font-size: 32px; /* Smaller font size for hero heading */
+    font-size: 32px;
   }
 
   .hero p {
-    font-size: 16px; /* Smaller font size for hero paragraph */
+    font-size: 16px;
   }
 
   section {
-    padding: 60px 15px; /* Adjust section padding */
+    padding: 60px 15px;
   }
 
   section h2 {
-    font-size: 30px; /* Smaller section headings */
+    font-size: 30px;
     margin-bottom: 40px;
   }
 
   .projects .project-list {
-    grid-template-columns: 1fr; /* Single column for projects on small screens */
+    grid-template-columns: 1fr; 
   }
 
   .project {
-    padding: 25px; /* Slightly less padding for project boxes */
+    padding: 25px;
   }
 }
 
-/* Very small screens */
 @media (max-width: 480px) {
     .hero h2 {
         font-size: 28px;
